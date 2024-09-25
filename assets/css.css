@@ -1,0 +1,57 @@
+.flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+body{
+    margin: 0px;
+}
+
+.center-content{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+main{
+    margin:0px;
+    height: 100vh;
+    background-color: blanchedalmond;
+}
+
+footer{
+    margin:0px;
+    background-color: black;
+    height: 150px;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    /* Mobile */
+
+
+
+}
+
+
+/* Responsive Design */
+@media only screen and (min-width: 768px) {
+    /* Desktop */
+    .center-content{
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        max-width: 1200px;
+    }
+
+    .flex-element{
+        width: 50%;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    
+}
