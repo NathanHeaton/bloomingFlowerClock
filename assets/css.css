@@ -20,6 +20,11 @@ main{
     background-color: blanchedalmond;
 }
 
+#canvas{
+    width: 100%;
+    height: calc(width);
+}
+
 footer{
     margin:0px;
     background-color: black;
@@ -42,12 +47,20 @@ footer{
         margin-left: auto;
         margin-right: auto;
         width: 80%;
-        max-width: 1200px;
+        max-width: 1800px;
     }
 
-    .flex-element{
-        width: 50%;
-        padding: 20px;
+    .flex-element-70{
+        width: 70%;
+        padding: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .flex-element-30{
+        width: 30%;
+        padding: 0px;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
