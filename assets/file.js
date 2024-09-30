@@ -1,19 +1,20 @@
 // code to change flowers
 const canvas = document.getElementById("canvas")
 const context = canvas.getContext("2d");
-context.imageSmoothingEnabled =false;
+context.imageSmoothingEnabled = false;
 
 const windowWidth = window.innerWidth;
 
+let flowerSection = document.getElementsByClassName("flex-element-70")
 let margins = 0;
 let optimalWidthtotal = 0;
 let widthMult = 0;
-
+const ASPECT_RATIO = 128 / 96;
 
 
 const DATE = new Date();
 const FRAME_SIZE = 128;
-
+const FRAME_SIZEX = 96;
 
 
 
@@ -23,17 +24,25 @@ let timeOfMonth = 0;
 let flowers = new Image();
 flowers.src = "assets/img/flower sprite sheet.png"
 
-
+window.addEventListener("resize",setFlowerSize)
 
 getTimeOfMonth();
+
 setFlowerSize();
+//set aspect ratio of flower content
 function setFlowerSize()
 {
-    margins = windowWidth /5;
-    optimalWidthtotal = (windowWidth - (margins *2)) /2;
-    widthMult = optimalWidthtotal / FRAME_SIZE;
+    optimalWidthtotal = flowerSection[0].clientWidth;
+    if (optimalWidthtotal > 800)
+        {
+            optimalWidthtotal = 800;
+        }
+    widthMult = optimalWidthtotal / FRAME_SIZEX;
+    canvas.width = optimalWidthtotal;
+    canvas.height = optimalWidthtotal * ASPECT_RATIO; // calclates the best height to view the content
+    context.imageSmoothingEnabled = false;
 
-
+    pickFlower();
 
 }
 
@@ -67,13 +76,13 @@ function pickFlower()
 
     context.drawImage(
         flowers,
-        FRAME_SIZE*month,
+        FRAME_SIZEX*month,
         FRAME_SIZE*timeOfMonth,
-        FRAME_SIZE,
+        FRAME_SIZEX,
         FRAME_SIZE,
         0,
         0,
-        FRAME_SIZE*widthMult,
+        FRAME_SIZEX*widthMult,
         FRAME_SIZE*widthMult
     );
     console.log("drew flower");
