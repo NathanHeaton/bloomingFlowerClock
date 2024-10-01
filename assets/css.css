@@ -1,120 +1,184 @@
-.flex {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+/* ===================================
+   Global Styles
+   =================================== */
+   html, body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 220, 167);
 }
 
-h1{
+.center-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+/* ===================================
+   Typography
+   =================================== */
+h1 {
     font-family: "Calistoga", serif;
     font-size: 4em;
     color: rgb(36, 19, 14);
     margin-bottom: 15px;
 }
 
-p{
+p, a {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-body{
-    margin: 0px;
-    background-color: rgb(255, 220, 167);
+a {
+    color: rgb(39, 124, 39);
 }
 
-.center-content{
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
+/* ===================================
+   Layout: Flexbox and Main Section
+   =================================== */
+.flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-main{
-    margin:0px;
+main {
+    margin: 0;
     height: 100vh;
     background-color: rgb(255, 220, 167);
 }
 
-.flex-element-30{
+.flex-element-30 {
     background-color: rgb(212, 170, 107);
     padding: 15px;
 }
 
+.flex-element-70 {
+    padding: 0;
+}
 
-#canvas{
+.flower-nav {
+    display: flex;
+    position: absolute;
+    top: 50vh;
+}
+
+.flower-Description{
+    display: none;
+}
+
+#cheatForm{
+    display: none;
+}   
+
+/* ===================================
+   Buttons
+   =================================== */
+.btn {
+    cursor: pointer;
+    border: 0;
+    height: 30px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    padding: 0 30px;
+    background: rgb(255, 220, 167);
+}
+
+.btn:hover {
+    color: rgb(255, 255, 255);
+    background: rgb(189, 140, 82);
+    border-style: solid;
+}
+
+/* ===================================
+   Canvas
+   =================================== */
+#canvas {
     display: block;
-
 }
 
-footer{
-    margin:0px;
+/* ===================================
+   Article
+   =================================== */
+article {
+    margin-top: 20vh;
+}
+
+/* ===================================
+   Footer
+   =================================== */
+footer {
+    margin: 0;
+    padding: 60px 0;
     background-color: rgb(212, 170, 107);
-    height: 150px;
 }
 
-/* Responsive Design */
+/* ===================================
+   Responsive Design
+   =================================== */
 @media only screen and (max-width: 768px) {
     /* Mobile */
-    main{
+    .flower-nav {
+        position: initial;
+    }
+    article {
+        margin: 0;
+    }
+
+    main {
         height: auto;
     }
-    .center-content{
+
+    .center-content {
         flex-wrap: wrap;
     }
 
-    h1{
+    h1 {
         font-size: 3em;
     }
 
-    .flex-element-70{
+    .flex-element-70 {
         width: 100%;
         height: 70vh;
-        padding: 0px;
         display: flex;
+
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
     }
 
-    .flex-element-30{
+    .flex-element-30 {
         width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
         padding-bottom: 60px;
         margin-bottom: 5vw;
+        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: flex-start;
     }
-
-
 }
 
-
-/* Responsive Design */
 @media only screen and (min-width: 768px) {
     /* Desktop */
-    .center-content{
-        margin-left: auto;
-        margin-right: auto;
+    .center-content {
         width: 80%;
         max-width: 1800px;
     }
 
-    .flex-element-70{
+    .flex-element-70 {
         width: 70%;
         height: 100vh;
-        padding: 0px;
         display: flex;
         align-items: center;
         justify-content: center;
-
     }
 
-    .flex-element-30{
+    .flex-element-30 {
         width: 30%;
         height: 100vh;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        flex-wrap: wrap;
     }
-
-    
 }
