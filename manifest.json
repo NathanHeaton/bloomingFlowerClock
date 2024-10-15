@@ -2,10 +2,11 @@
     "name": "Blooming Clock",
     "short_name": "Bloom",
     "description": "an unconvetional clock",
-    "start_url": "/index.html",
+    "start_url": "https://nathanheaton.github.io/bloomingFlowerClock/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#000000",
+    "scope": "https://nathanheaton.github.io/bloomingFlowerClock/index.html",
     "icons": [
       {
         "src": "assets/img/icon.png",
