@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Nathan Heaton">
         <title>Blooming Clock</title>
+        <link rel="manifest" href="/manifest.json">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="shortcut icon" href="assets/img/icon.png" >
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +31,7 @@
 
                             <h1>  Snowdrops (Galanthus):</h1> 
                             <p>
-                                Snowdrops are early spring flowers that bloom from January, often poking
+                                Snowdrops are early spring flowers that bloom after winter, often poking
                                 through the snow. Characterized by their delicate, nodding white flowers, they symbolize hope and
                                 renewal, bringing a touch of brightness to the winter landscape.
                             </p>
@@ -61,7 +62,7 @@
                             <p>
                                 Primula auricula: Also known as the auricula primrose, this plant features
                                 stunning rosettes of colorful flowers in shades of yellow, pink, and purple.
-                                Blooming in April, it prefers well-drained soil and sunny locations, often
+                                Blooming in late spring, it prefers well-drained soil and sunny locations, often
                                 found in alpine gardens.
                             </p>
                         </article>
@@ -69,7 +70,7 @@
                         <article class="flower-Description">
                             <h1>Tulips</h1>
                             <p>
-                                Tulips: Iconic spring bulbs, tulips bloom in a rainbow of colors in May.
+                                Tulips: Iconic spring bulbs, tulips bloom in a rainbow of colors.
                                 Their cup-shaped flowers stand tall on sturdy stems, making them popular
                                 in gardens and landscapes. They thrive in well-drained soil and full
                                     sunlight, symbolizing renewal.
@@ -90,7 +91,7 @@
                             <h1>Sweet Peas</h1>
                             <p>
                                 Sweet Peas: These fragrant climbing plants produce an abundance of
-                                colorful, delicate flowers in July. Known for their sweet scent,
+                                colorful. Known for their sweet scent,
                                 sweet peas are often used in gardens and cut flower arrangements.
                                 They thrive in sunny locations and well-drained soil.
                             </p>
@@ -109,7 +110,7 @@
                         <article class="flower-Description">
                             <h1>Echinacea</h1>
                             <p>
-                                Echinacea: Also known as coneflower, echinacea blooms in September
+                                Echinacea: Also known as coneflower, echinacea
                                 with striking pink or purple daisy-like flowers. They are hardy
                                 perennials that attract butterflies and bees, thriving in sunny
                                 locations and well-drained soil, and are often used in herbal remedies.
@@ -119,8 +120,8 @@
                         <article class="flower-Description">
                             <h1>Nerines</h1>
                             <p>
-                                Nerines: Known for their vibrant pink or red flowers, nerines bloom 
-                                in October, bringing color to the autumn landscape. They thrive in
+                                Nerines: Known for their vibrant pink or red flowers
+                                , bringing color to the autumn landscape. They thrive in
                                 well-drained soil and sunny spots, often found in mixed borders and
                                 containers, adding charm to fall gardens.
                             </p>
@@ -132,7 +133,7 @@
                                 Camellia: Blooming in late autumn to early winter, camellias produce 
                                 stunning rose-like flowers in shades of red, pink, and white. These 
                                 evergreen shrubs thrive in acidic, well-drained soil and partial shade,
-                                adding vibrant color to November gardens.
+                                adding vibrant color to early winter gardens.
                             </p>
                         </article>
                         
@@ -140,7 +141,7 @@
                             <h1>Dogwood</h1>
                             <p>
                                 Dogwood: Blooming in late winter, dogwood trees are known for their
-                                striking white or pink flowers. In December, their branches may display
+                                striking white or pink flowers. Their branches may display
                                 vibrant red or yellow stems, adding color to winter landscapes.
                                 They thrive in well-drained soil and partial shade.
                             </p>
@@ -149,14 +150,14 @@
                         <article class="flower-Description">
                             <h1>?????</h1>
                             <p>
-                                Flower is not gonna bloom yet.
+                                Flower is not gonna bloom yet, you have to wait.😊
                             </p>
                         </article>
 
                         <article class="flower-Description">
                             <h1>?????</h1>
                             <p>
-                                Flower has wilted.
+                                Sadly this flower has wilted, you can see it in all it's beauty next year.
                             </p>
                         </article>
                     </div>
@@ -176,9 +177,21 @@
                 <button type="submit">Submit</button>
             </form>
             <p>contact: <a href="mailto:Nathanmheaton@gmail.com?subject=Your%20Subject">Nathanmheaton@gmail.com</a> | <a href="tel:+353851583350">0851583350</a></p>
-            <p>made by Nathan</p>
+            <p>made by Nathan Heaton</p>
             </section>
         </footer>
+          <!-- Service Worker Registration -->
+        <script>
+            if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/serviceworker.js')
+            .then((registration) => {
+                console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch((error) => {
+                console.log('Service Worker registration failed:', error);
+            });
+            }
+        </script>
        <script src="assets/file.js"></script>
     </body>
 </html>

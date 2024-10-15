@@ -57,7 +57,7 @@ function previousMonth()
     userMonth--;
     if(userMonth < 0)
     {
-        userMonth = 11;
+        userMonth = 0;
     }
     if(userMonth > month)
     {
@@ -74,7 +74,7 @@ function futureMonth()
     userMonth++;
     if(userMonth > 11)
     {
-        userMonth = 0;
+        userMonth = 11;
     }
     if(userMonth < month)
     {
@@ -134,9 +134,9 @@ function pickFlower(m,d)
 }
 
 function checkDate(){
-    if (userMonth!=month && !cheatEnabled)
+    if (userMonth < month && !cheatEnabled)
     {
-        context.fillStyle = "rgba(54, 54, 54, 0.5)"; // Corrected case
+        context.fillStyle = "rgba(0, 0, 0, 0.2)"; // Corrected case
         context.fillRect(0, 0, canvas.width, canvas.height);
     }
 }
